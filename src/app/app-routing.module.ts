@@ -7,11 +7,11 @@ const routes: Routes = [
   {
     path: "",
     component: HomeComponent
-  },
-  {
-    path: "add-blog",
-    component: AddBlogComponent
   }
+  // {
+  //   path: "add-blog",
+  //   component: AddBlogComponent
+  // }
 ];
 
 @NgModule({
