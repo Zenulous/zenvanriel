@@ -1,7 +1,8 @@
-import { AddBlogComponent } from "./add-blog/add-blog.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
+import { TestAutomationComponent } from "./test-automation/test-automation.component";
+import { CodingRepositoriesComponent } from "./coding-repositories/coding-repositories.component";
 
 const routes: Routes = [
   {
@@ -9,9 +10,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "add-blog",
-    component: AddBlogComponent
-  }
+    path: "test-automation",
+    component: TestAutomationComponent
+  },
+  { path: "coding-repositories", component: CodingRepositoriesComponent }
 ];
 
 @NgModule({
