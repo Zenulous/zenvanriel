@@ -1,2 +1,2 @@
-ng build --prod --base-href https://zenulous.github.io/zenvanriel/
-ngh --dir=dist/zenvanriel
+call ng build --prod --base-href https://zenulous.github.io/zenvanriel/
+call ngh --dir=dist/zenvanriel
