@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Inject } from "@angular/core";
+import { LOCAL_STORAGE } from '@ng-toolkit/universal';
 
 @Component({
   selector: "app-home",
@@ -6,9 +7,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(@Inject(LOCAL_STORAGE) private localStorage: any, ) {}
   blogs = [];
   ngOnInit() {
-    this.blogs = JSON.parse(localStorage.getItem("blogs"));
+    this.blogs = JSON.parse(this.localStorage.getItem("blogs"));
   }
 }

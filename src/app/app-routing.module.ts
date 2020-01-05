@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { TestAutomationComponent } from "./test-automation/test-automation.component";
 import { CodingRepositoriesComponent } from "./coding-repositories/coding-repositories.component";
+import { BrowserGameComponent } from "./browser-game/browser-game.component";
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
     path: "test-automation",
     component: TestAutomationComponent
   },
-  { path: "coding-repositories", component: CodingRepositoriesComponent }
+  { path: "coding-repositories", component: CodingRepositoriesComponent },
+  { path: "browser-game", component: BrowserGameComponent },
 ];
 
 @NgModule({
