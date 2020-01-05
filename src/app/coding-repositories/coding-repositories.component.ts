@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Title, Meta } from "@angular/platform-browser";
 
 @Component({
   selector: "app-coding-repositories",
@@ -6,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./coding-repositories.component.css"]
 })
 export class CodingRepositoriesComponent implements OnInit {
+  title = "Coding Repositories - Zen van Riel";
   githubItems = [
     {
       title: "curl_modifier",
@@ -24,7 +26,20 @@ export class CodingRepositoriesComponent implements OnInit {
         "PowerShell module to simplify uninstalling a batch of PowerShell modules by using glob patterns. https://www.powershellgallery.com/packages/Uninstall-Modules/0.1.0"
     }
   ];
-  constructor() {}
+  constructor(private titleService: Title, private metaService: Meta) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.metaService.addTags([
+      {
+        name: "keywords",
+        content: "Zen van Riel, Zen, Riel, Repositories, GitHub, Code"
+      },
+      {
+        name: "description",
+        content: "My public coding repositories in one overview."
+      },
+      { name: "robots", content: "index, follow" }
+    ]);
+  }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener, Inject } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
+import { Title, Meta } from "@angular/platform-browser";
 
 @Component({
   selector: "app-browser-game",
@@ -6,7 +7,8 @@ import { Component, OnInit, HostListener, Inject } from "@angular/core";
   styleUrls: ["./browser-game.component.css"]
 })
 export class BrowserGameComponent implements OnInit {
-  constructor() {}
+  title = "Browser Game - Zen van Riel";
+  constructor(private titleService: Title, private metaService: Meta) {}
   @HostListener("window:resize")
   scaleGameBasedOnWindowSize() {
     const elem = document.getElementById("game-canvas");
@@ -23,10 +25,15 @@ export class BrowserGameComponent implements OnInit {
   }
 
   ngOnInit() {
-    const elem = document.getElementById("game-canvas");
-    elem.remove();
-    const elem2 = document.getElementById("game-div");
-    elem2.appendChild(elem);
+    this.titleService.setTitle(this.title);
+    this.metaService.addTags([
+      { name: "keywords", content: "Zen van Riel, Zen, Riel, Game" },
+      {
+        name: "description",
+        content: "Small game playable in your browser."
+      },
+      { name: "robots", content: "index, follow" }
+    ]);
     this.scaleGameBasedOnWindowSize();
   }
 }

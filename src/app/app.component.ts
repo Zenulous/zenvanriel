@@ -6,9 +6,10 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "zenvanriel";
   navbarOpen = false;
+  constructor() {}
 
+  ngOnInit() {}
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }
