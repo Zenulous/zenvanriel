@@ -1,17 +1,10 @@
-import { NgModule } from '@angular/core';
-import { ServerModule, ServerTransferStateModule } from '@angular/platform-server';
+import { NgModule } from "@angular/core";
 
-import { AppModule } from './app.module';
-import { AppComponent } from './app.component';
-import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
+import { AppModule } from "./app.module";
+import { AppComponent } from "./app.component";
 
 @NgModule({
-  imports: [
-    AppModule,
-    ServerModule,
-    ModuleMapLoaderModule,
-    ServerTransferStateModule,
-  ],
-  bootstrap: [AppComponent],
+  imports: [AppModule],
+  bootstrap: [AppComponent]
 })
 export class AppServerModule {}

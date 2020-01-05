@@ -1,4 +1,3 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppRoutingModule } from "./app-routing.module";
@@ -7,10 +6,7 @@ import { HomeComponent } from "./home/home.component";
 import { TestAutomationComponent } from "./test-automation/test-automation.component";
 import { CodingRepositoriesComponent } from "./coding-repositories/coding-repositories.component";
 import { BrowserGameComponent } from "./browser-game/browser-game.component";
-import { CommonModule } from '@angular/common';
-import { TransferHttpCacheModule } from '@nguniversal/common';
-import { HttpClientModule } from '@angular/common/http';
-import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { BrowserModule } from "@angular/platform-browser";
 
 @NgModule({
   declarations: [
@@ -20,7 +16,7 @@ import { NgtUniversalModule } from '@ng-toolkit/universal';
     CodingRepositoriesComponent,
     BrowserGameComponent
   ],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, NgbModule, CommonModule, TransferHttpCacheModule, HttpClientModule, NgtUniversalModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent]
 })

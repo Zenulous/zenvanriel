@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener, Inject } from "@angular/core";
-import { WINDOW } from '@ng-toolkit/universal';
 
 @Component({
   selector: "app-browser-game",
@@ -7,7 +6,7 @@ import { WINDOW } from '@ng-toolkit/universal';
   styleUrls: ["./browser-game.component.css"]
 })
 export class BrowserGameComponent implements OnInit {
-  constructor(@Inject(WINDOW) private window: Window, ) {}
+  constructor() {}
   @HostListener("window:resize")
   scaleGameBasedOnWindowSize() {
     const elem = document.getElementById("game-canvas");
