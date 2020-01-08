@@ -20,6 +20,11 @@ export class BrowserGameComponent implements OnInit {
     elem.style.transformOrigin = "top left";
   }
 
+  enableFullscreenGame() {
+    const elem = document.getElementById("game-canvas");
+    elem.requestFullscreen();
+  }
+
   onResize() {
     this.scaleGameBasedOnWindowSize();
   }
