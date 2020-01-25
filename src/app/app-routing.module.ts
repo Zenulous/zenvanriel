@@ -16,6 +16,10 @@ const routes: Routes = [
   },
   { path: "coding-repositories", component: CodingRepositoriesComponent },
   { path: "browser-game", component: BrowserGameComponent },
+  {
+    path: "**",
+    component: HomeComponent
+  }
 ];
 
 @NgModule({
