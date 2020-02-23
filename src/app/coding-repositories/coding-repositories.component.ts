@@ -10,17 +10,24 @@ export class CodingRepositoriesComponent implements OnInit {
   title = "Coding Repositories - Zen van Riel";
   githubItems = [
     {
+      title: "typescript-project-template",
+      url: "https://github.com/Zenulous/typescript-project-template",
+      imageUrl: "https://api.iconify.design/logos-typescript-icon.svg",
+      description:
+        "A re-usable TypeScript template pushing for better code quality at the very start of a project's life cycle"
+    },
+    {
       title: "curl_modifier",
       url: "https://github.com/Zenulous/curl_modifier",
-      imageurl:
-        "https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/Powershell_256.png",
+      imageUrl:
+        "https://www.python.org/static/community_logos/python-powered-h-140x182.png",
       description:
         "A module to automatically modify, execute and repeat cURL requests"
     },
     {
       title: "Uninstall-Modules",
       url: "https://github.com/Zenulous/Uninstall-Modules",
-      imageurl:
+      imageUrl:
         "https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/Powershell_256.png",
       description:
         "PowerShell module to simplify uninstalling a batch of PowerShell modules by using glob patterns. https://www.powershellgallery.com/packages/Uninstall-Modules/0.1.0"
