@@ -3,7 +3,6 @@ import {RouteComponentProps} from "@reach/router";
 import DefaultNavbar from "../components/DefaultNavbar";
 import Metadata from "../components/Metadata";
 import Button from "@material-ui/core/Button";
-import scriptjs from "scriptjs";
 import "../css/browser-game.css";
 
 export default class BrowserGame extends React.Component<RouteComponentProps> {
@@ -15,14 +14,19 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
 
   componentDidMount() {
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    scriptjs("bluehat/processing.reactified.min.js", () => {});
+    const script = document.createElement("script");
+
+    script.src = "../bluehat/processing.reactified.min.js";
+    script.async = false;
+
+    document.body.appendChild(script);
     window.addEventListener("resize", this.handleShowGameState.bind(this));
     this.handleShowGameState();
   }
 
   componentDidUpdate() {
     if (this.state.showGame) {
-      let scaler = document.documentElement.clientWidth / 1600;
+      let scaler = document.documentElement.clientWidth / 1700;
       if (scaler > 0.85) {
         scaler = 0.85;
       }
@@ -35,6 +39,8 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
   }
 
   handleShowGameState() {
+    console.log(document.documentElement.clientWidth);
+
     const windowThreshold = 500;
     if (document.documentElement.clientWidth < windowThreshold) {
       this.setState({showGame: false});
@@ -47,7 +53,7 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
   }
 
   render() {
-    const mainGameWindow = this.state.showGame ? (
+    const mainGameInformation = this.state.showGame ? (
       <div>
         <p>
           This is a small game fully playable in your browser (1-2 players). The
@@ -56,11 +62,6 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
           time limit. Enemies can simply be avoided, while you have to extend
           the time limit yourself by collecting green clocks. Note: currently
           only keyboard controls are supported.
-        </p>
-        <Button className="btn btn-secondary">Enable Fullscreen</Button>
-        <p>
-          Assets retrieved from{" "}
-          <a href="https://opengameart.org/">Open Game Art</a>
         </p>
       </div>
     ) : (
@@ -72,6 +73,26 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
         </p>
       </div>
     );
+
+    const subGameInformation = this.state.showGame ? (
+      <div className="right-aligned">
+        <Button
+          variant="outlined"
+          color="primary"
+          onClick={() => this.gameCanvas.requestFullscreen()}
+        >
+          Enable Fullscreen
+        </Button>
+
+        <i>
+          Assets retrieved from{" "}
+          <a href="https://opengameart.org/">Open Game Art</a>
+        </i>
+      </div>
+    ) : (
+      <div></div>
+    );
+
     return (
       <div>
         <Metadata
@@ -81,15 +102,17 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
           }
         />
         <DefaultNavbar />
-        <h1>Browser Game</h1>
-        {mainGameWindow}
-        <canvas
-          ref={ref => (this.gameCanvas = ref)}
-          id="game-canvas"
-          data-processing-sources="bluehat/bluehat.pde"
-          width="1280"
-          height="720"
-        />
+        <div className="container">
+          <h1>Browser Game</h1>
+          {mainGameInformation}
+          <canvas
+            ref={ref => (this.gameCanvas = ref)}
+            data-processing-sources="../bluehat/bluehat.pde"
+            width="1280"
+            height="720"
+          />
+          {subGameInformation}
+        </div>
       </div>
     );
   }

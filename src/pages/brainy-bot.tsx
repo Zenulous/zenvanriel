@@ -3,7 +3,7 @@ import {RouteComponentProps} from "@reach/router";
 import DefaultNavbar from "../components/DefaultNavbar";
 import Metadata from "../components/Metadata";
 
-export default class Home extends React.Component<RouteComponentProps> {
+export default class BrainyBot extends React.Component<RouteComponentProps> {
   render() {
     return (
       <div>
@@ -14,7 +14,7 @@ export default class Home extends React.Component<RouteComponentProps> {
           }
         />
         <DefaultNavbar />
-        <p>Brainy Bot Page</p>
+        <p>Brainy is cool!</p>
       </div>
     );
   }

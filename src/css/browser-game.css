@@ -4,3 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
+.right-aligned {
+  display: flex;
+  justify-content: space-between;
+}

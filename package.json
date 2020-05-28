@@ -5,7 +5,8 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "check": "eslint . --ext .ts,.tsx --fix && gatsby build"
+    "check": "eslint . --ext .ts,.tsx --fix && gatsby build",
+    "staging": "gatsby build && gatsby serve"
   },
   "husky": {
     "hooks": {
@@ -27,7 +28,6 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
-    "scriptjs": "^2.5.9",
     "typescript": "^3.9.3"
   },
   "devDependencies": {
