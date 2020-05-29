@@ -14,7 +14,7 @@ export default class Home extends React.Component<RouteComponentProps> {
           }
         />
         <DefaultNavbar />
-        <p>Brainy Bot Page</p>
+        <p>home</p>
       </div>
     );
   }

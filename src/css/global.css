@@ -4,3 +4,11 @@
   margin-right: 10px;
   margin-left: 10px;
 }
+
+.nav-link {
+  color: white;
+}
+
+.navbar {
+  text-align: center;
+}

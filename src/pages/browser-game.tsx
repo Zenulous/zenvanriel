@@ -12,6 +12,11 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
     showGame: false,
   };
 
+  constructor(props: Readonly<RouteComponentProps<{}>>) {
+    super(props);
+    this.handleShowGameState = this.handleShowGameState.bind(this);
+  }
+
   componentDidMount() {
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     const script = document.createElement("script");
@@ -20,8 +25,12 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
     script.async = false;
 
     document.body.appendChild(script);
-    window.addEventListener("resize", this.handleShowGameState.bind(this));
+    window.addEventListener("resize", this.handleShowGameState);
     this.handleShowGameState();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleShowGameState);
   }
 
   componentDidUpdate() {
@@ -39,8 +48,6 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
   }
 
   handleShowGameState() {
-    console.log(document.documentElement.clientWidth);
-
     const windowThreshold = 500;
     if (document.documentElement.clientWidth < windowThreshold) {
       this.setState({showGame: false});
