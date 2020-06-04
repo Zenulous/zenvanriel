@@ -1,7 +1,7 @@
 import * as React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import favIcon from "../images/favicon.png";
-import brainyIcon from "../images/brainy.png";
+import brainyIcon from "../../static/brainy.png";
 import {Link} from "gatsby";
 import "bootstrap/dist/css/bootstrap.css";
 

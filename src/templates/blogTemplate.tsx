@@ -4,27 +4,33 @@ import {graphql} from "gatsby";
 import Metadata from "../components/Metadata";
 import DefaultNavbar from "../components/DefaultNavbar";
 
+interface MarkdownRemark {
+  frontmatter: {
+    slug: string;
+    title: string;
+    description: string;
+    imageUrl?: string;
+  };
+  html: string;
+}
 export default function Template({data}) {
-  const {markdownRemark} = data;
-  const {frontmatter, html} = markdownRemark;
+  const markdownRemark = data.markdownRemark as MarkdownRemark;
+
   return (
     <div>
       <Metadata
-        title={"Zen van Riel - Home Page"}
-        description={
-          "This site serves as a small portfolio to post about some of my work."
-        }
+        title={markdownRemark.frontmatter.title}
+        description={markdownRemark.frontmatter.description}
+        imageUrl={markdownRemark.frontmatter.imageUrl}
       />
       <DefaultNavbar />
       <div className="container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{__html: html}}
-          />
-        </div>
+        <h1>{markdownRemark.frontmatter.title}</h1>
+
+        <div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{__html: markdownRemark.html}}
+        />
       </div>
     </div>
   );
@@ -35,9 +41,11 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: {slug: {eq: $slug}}) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         slug
         title
+        description
+        imageUrl
+        date
       }
     }
   }
