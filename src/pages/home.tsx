@@ -14,7 +14,14 @@ export default class Home extends React.Component<RouteComponentProps> {
           }
         />
         <DefaultNavbar />
-        <p>home</p>
+
+        <div className="container">
+          <h1>Home</h1>
+          <p>
+            Welcome to my website. This site serves as a portfolio and a place
+            for me to post about some of my projects and work.
+          </p>
+        </div>
       </div>
     );
   }

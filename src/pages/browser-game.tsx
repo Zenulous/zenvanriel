@@ -82,7 +82,7 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
     );
 
     const subGameInformation = this.state.showGame ? (
-      <div className="right-aligned">
+      <div className="right-aligned-content-footer">
         <Button
           variant="outlined"
           color="primary"
@@ -103,10 +103,8 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
     return (
       <div>
         <Metadata
-          title={"Zen van Riel - Home Page"}
-          description={
-            "This site serves as a small portfolio to post about some of my work."
-          }
+          title={"Zen van Riel - Browser Game"}
+          description={"Small browser game playable by 1-2 people."}
         />
         <DefaultNavbar />
         <div className="container">

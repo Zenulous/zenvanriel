@@ -7,6 +7,10 @@ export default function Metadata(props: {
   imageUrl?: string;
 }) {
   const defaultImageUrl = "www.zenvanriel.nl/logo.png";
+  let useDefaultImage = false;
+  if (!props.imageUrl || props.imageUrl === "") {
+    useDefaultImage = true;
+  }
   return (
     <Helmet>
       <title>{props.title}</title>
@@ -19,9 +23,20 @@ export default function Metadata(props: {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={props.title} />
       <meta name="og:site_name" content="Zen van Riel" />
-      <meta name="og:image" content={props.imageUrl || defaultImageUrl} />
-      <meta name="image" content={props.imageUrl || defaultImageUrl} />
+      <meta
+        name="og:image"
+        content={useDefaultImage ? defaultImageUrl : props.imageUrl}
+      />
+      <meta
+        name="image"
+        content={useDefaultImage ? defaultImageUrl : props.imageUrl}
+      />
       <meta property="og:description" content={props.description} />
+      Settings
+      <script
+        src="https://kit.fontawesome.com/7916448baf.js"
+        crossOrigin="anonymous"
+      ></script>
     </Helmet>
   );
 }

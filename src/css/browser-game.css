@@ -4,7 +4,8 @@
   font-weight: normal;
   font-style: normal;
 }
-.right-aligned {
+
+.right-aligned-content-footer {
   display: flex;
   justify-content: space-between;
 }

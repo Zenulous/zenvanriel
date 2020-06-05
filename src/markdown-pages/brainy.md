@@ -1,8 +1,8 @@
 ---
 slug: "/brainy-bot"
-title: "Brainy"
+title: "Zen van Riel - Brainy"
 description: "Brainy is a Microsoft Teams app (bot) that helps a team with the allocation of tasks"
-imageUrl: "www.zenvanriel.nl/brainy.png"
+imageUrl: "www.zenvanriel.nl/icons/brainy.png"
 date: "0-0-0000"
 ---
 

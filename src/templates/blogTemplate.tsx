@@ -15,7 +15,7 @@ interface MarkdownRemark {
 }
 export default function Template({data}) {
   const markdownRemark = data.markdownRemark as MarkdownRemark;
-
+  const blogTitle = markdownRemark.frontmatter.title.split("- ")[1];
   return (
     <div>
       <Metadata
@@ -25,7 +25,7 @@ export default function Template({data}) {
       />
       <DefaultNavbar />
       <div className="container">
-        <h1>{markdownRemark.frontmatter.title}</h1>
+        <h1>{blogTitle}</h1>
 
         <div
           className="blog-post-content"
