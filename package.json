@@ -6,6 +6,8 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "check": "eslint . --ext .ts,.tsx --fix && gatsby build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public",
     "staging": "gatsby build && gatsby serve"
   },
   "husky": {
