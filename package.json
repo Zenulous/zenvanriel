@@ -25,6 +25,7 @@
     "gatsby-plugin-manifest": "^2.4.9",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-styletron": "^5.0.3",
     "gatsby-plugin-typescript": "^2.4.3",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-remark": "^2.8.13",
@@ -33,6 +34,8 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "react-markdown": "^4.3.1",
+    "styletron-engine-atomic": "^1.4.6",
+    "styletron-react": "^5.2.7",
     "typescript": "^3.9.3"
   },
   "devDependencies": {
@@ -40,6 +43,7 @@
     "@types/react": "^16.9.35",
     "@types/react-helmet": "^6.0.0",
     "@types/scriptjs": "0.0.2",
+    "@types/styletron-react": "^5.0.2",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^6.8.0",
