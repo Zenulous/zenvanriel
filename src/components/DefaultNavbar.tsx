@@ -1,14 +1,14 @@
 import * as React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import favIcon from "../images/favicon.png";
-import brainyIcon from "../../static/icons/brainy.png";
+import logoIcon from "../../static/icons/logo.svg";
+import brainyIcon from "../../static/icons/brainy.svg";
 import {Link} from "gatsby";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function DefaultNavbar() {
   return (
     <Navbar expand="lg" bg="dark" variant="dark">
-      <img className="default-icon" src={favIcon}></img>
+      <img className="default-icon" src={logoIcon}></img>
       <Link to="/">
         <Navbar.Brand>Zen van Riel</Navbar.Brand>
       </Link>
@@ -27,10 +27,11 @@ export default function DefaultNavbar() {
           Miscellaneous Projects
         </Link>
         <Link to="/brainy-bot" className="nav-link">
+          <img src={brainyIcon} />
           Brainy
-          <img className="default-icon" src={brainyIcon} />
         </Link>
       </Navbar.Collapse>
+
       <a
         href="https://www.linkedin.com/in/zen-van-riel/"
         className="nav-link fab fa-linkedin anchor"

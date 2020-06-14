@@ -4,7 +4,7 @@ export default [
     description:
       "Brainy is a Microsoft Teams app (bot) that helps a team with the allocation of tasks",
     githubUrl: "https://github.com/microsoft/microsoft-teams-brainy-bot",
-    imageUrl: "/icons/brainy.png",
+    imageUrl: "/icons/brainy.svg",
   },
   {
     title: "LUIS Test Framework",
