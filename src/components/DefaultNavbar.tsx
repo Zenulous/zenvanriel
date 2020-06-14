@@ -27,7 +27,7 @@ export default function DefaultNavbar() {
           Miscellaneous Projects
         </Link>
         <Link to="/brainy-bot" className="nav-link">
-          <img src={brainyIcon} />
+          <img className="default-icon" src={brainyIcon} />
           Brainy
         </Link>
       </Navbar.Collapse>
