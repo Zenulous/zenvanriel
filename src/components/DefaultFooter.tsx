@@ -3,12 +3,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import {styled} from "styletron-react";
 import gatsbySvg from "../../static/icons/gatsby.svg";
 
-const FooterDiv = styled("div", {
+const FooterDiv = styled("footer", {
   backgroundColor: "#212529",
-  position: "absolute",
+  position: "fixed",
+  bottom: "0px",
   width: "100%",
   height: "50px",
-  bottom: "0",
 });
 
 const FooterText = styled("span", {
@@ -32,5 +32,3 @@ export default function DefaultFooter() {
     </FooterDiv>
   );
 }
-
-//#212529

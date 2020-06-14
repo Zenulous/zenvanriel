@@ -7,8 +7,8 @@ import certificationDeveloper from "../../static/assets/certificationDeveloper.p
 import certificationDevOps from "../../static/assets/certificationDevOps.png";
 import {styled} from "styletron-react";
 
-const CertificateIcon = styled("img", {height: "15vw", float: "left"});
-const CertficateContainer = styled("div", {position: "relative", top: "100%"});
+const CertificateIcon = styled("img", {height: "100%", float: "left"});
+const CertficateContainer = styled("div", {height: "15vw", width: "100%"});
 
 export default class Home extends React.Component<RouteComponentProps> {
   render() {
@@ -44,7 +44,6 @@ export default class Home extends React.Component<RouteComponentProps> {
             <CertificateIcon src={certificationDevOps}></CertificateIcon>
           </CertficateContainer>
         </div>
-
         <DefaultFooter />
       </div>
     );
