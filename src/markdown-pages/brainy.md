@@ -16,7 +16,7 @@ The three roles are as follows:
 
 The Brainy bot enables a fast and simple process flow through the use of customized adaptive cards which embed various user friendly features.
 
-| [Documentation](https://github.com/microsoft/microsoft-teams-brainy-bot/wiki) | [Deployment guide](https://github.com/microsoft/microsoft-teams-brainy-bot/wiki/Deployment-Guide)
+[GitHub Code Repository](https://github.com/microsoft/microsoft-teams-brainy-bot)
 
 # Main Features
 
