@@ -4,6 +4,12 @@ import logoIcon from "../../static/icons/logo.svg";
 import brainyIcon from "../../static/icons/brainy.svg";
 import {Link} from "gatsby";
 import "bootstrap/dist/css/bootstrap.css";
+import {styled} from "styletron-react";
+
+const StyledAnchor = styled("a", {
+  padding: 0,
+  marginLeft: "10px",
+});
 
 export default function DefaultNavbar() {
   return (
@@ -32,15 +38,15 @@ export default function DefaultNavbar() {
         </Link>
       </Navbar.Collapse>
 
-      <a
+      <StyledAnchor
         href="https://www.linkedin.com/in/zen-van-riel/"
-        className="nav-link fab fa-linkedin anchor"
-      ></a>
+        className="nav-link fab fa-linkedin fa-4x anchor"
+      ></StyledAnchor>
 
-      <a
+      <StyledAnchor
         href="https://www.github.com/zenulous"
         className="nav-link fab fa-github anchor"
-      ></a>
+      ></StyledAnchor>
     </Navbar>
   );
 }
