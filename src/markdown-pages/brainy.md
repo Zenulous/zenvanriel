@@ -16,7 +16,7 @@ The three roles are as follows:
 
 The Brainy bot enables a fast and simple process flow through the use of customized adaptive cards which embed various user friendly features.
 
-[Deployment guide](https://github.com/microsoft/microsoft-teams-brainy-bot/wiki/Deployment-Guide)
+| [Documentation](https://github.com/microsoft/microsoft-teams-brainy-bot/wiki) | [Deployment guide](https://github.com/microsoft/microsoft-teams-brainy-bot/wiki/Deployment-Guide)
 
 # Main Features
 
@@ -44,3 +44,19 @@ The Brainy bot enables a fast and simple process flow through the use of customi
 
 - The card received by the TE contains all information submitted by the TO and the TM's comment
 - The TE can Accept/Decline, open a chat with the TM/TO and schedule a meeting with the TM/TO through the click of a button
+
+# Architecture
+
+<img  src="https://github.com/microsoft/microsoft-teams-brainy-bot/wiki/.attachments/architecture.png" width=50%>
+
+## Brainy Bot
+
+The bot is hosted on Azure App Service. It is built using TypeScript and the [Bot Framework SDK v4](https://docs.microsoft.com/en-us/azure/bot-service/javascript/bot-builder-javascript-quickstart?view=azure-bot-service-4.0). Task Owners and Task Executors communicate to Brainy using a 1:1 channel. Task Managers communicate to Brainy using the respective manager team.
+
+## Configuration Application
+
+The configuration app is an [Angular](https://angular.io/) application used to configure the manager team and all user roles. To access the application, the user's user principal name (UPN) within an Azure Active Directory tenant is checked against a whitelist.
+
+## SQL Database
+
+The SQL database is predominantly used to store and retrieve data related to the task allocation process. A full history of tasks, actions, assignments and feedback is stored in this database. Such relational data can easily be used to achieve data visualization utilizing [PowerBI](https://powerbi.microsoft.com/) or to create a companion app. The database also retains user role information and task metadata, which is used in Brainy's rigid permission system.
