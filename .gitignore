@@ -6,3 +6,4 @@ lib
 build
 public
 .cache
+yarn-error.log
