@@ -4,6 +4,9 @@ import DefaultNavbar from "../components/DefaultNavbar";
 import Metadata from "../components/Metadata";
 import Button from "@material-ui/core/Button";
 import "../css/browser-game.css";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSadTear} from "@fortawesome/free-solid-svg-icons";
+import {CenteredFlexBox} from "../styles/CenteredFlexBox";
 
 export default class BrowserGame extends React.Component<RouteComponentProps> {
   gameCanvas: HTMLCanvasElement;
@@ -49,7 +52,7 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
 
   handleShowGameState() {
     const windowThreshold = 500;
-    if (document.documentElement.clientWidth < windowThreshold) {
+    if (document.documentElement.clientWidth <= windowThreshold) {
       this.setState({showGame: false});
       return;
     }
@@ -73,6 +76,9 @@ export default class BrowserGame extends React.Component<RouteComponentProps> {
       </div>
     ) : (
       <div>
+        <CenteredFlexBox>
+          <FontAwesomeIcon icon={faSadTear} size="10x"></FontAwesomeIcon>
+        </CenteredFlexBox>
         <p>
           Your browser does not support this game. This could be because you are
           on a mobile device. If you are on a desktop, please enlarge the width
