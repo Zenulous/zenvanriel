@@ -32,6 +32,9 @@ export default function DefaultNavbar() {
         <Link to="/coding-repositories" className="nav-link">
           Miscellaneous Projects
         </Link>
+        <Link to="/blogs" className="nav-link">
+          Blogs
+        </Link>
         <Link to="/brainy-bot" className="nav-link">
           <img className="default-icon" src={brainyIcon} />
           Brainy
