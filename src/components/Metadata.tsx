@@ -32,11 +32,6 @@ export default function Metadata(props: {
         content={useDefaultImage ? defaultImageUrl : props.imageUrl}
       />
       <meta property="og:description" content={props.description} />
-      Settings
-      <script
-        src="https://kit.fontawesome.com/7916448baf.js"
-        crossOrigin="anonymous"
-      ></script>
     </Helmet>
   );
 }

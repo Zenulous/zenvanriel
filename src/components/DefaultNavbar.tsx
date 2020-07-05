@@ -5,10 +5,13 @@ import brainyIcon from "../../static/icons/brainy.svg";
 import {Link} from "gatsby";
 import "bootstrap/dist/css/bootstrap.css";
 import {styled} from "styletron-react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
 const StyledAnchor = styled("a", {
   padding: 0,
   marginLeft: "10px",
+  marginRight: "25px",
 });
 
 export default function DefaultNavbar() {
@@ -43,13 +46,13 @@ export default function DefaultNavbar() {
 
       <StyledAnchor
         href="https://www.linkedin.com/in/zen-van-riel/"
-        className="nav-link fab fa-linkedin fa-4x anchor"
-      ></StyledAnchor>
-
-      <StyledAnchor
-        href="https://www.github.com/zenulous"
-        className="nav-link fab fa-github anchor"
-      ></StyledAnchor>
+        className="nav-link"
+      >
+        <FontAwesomeIcon icon={faLinkedin} size="2x"></FontAwesomeIcon>
+      </StyledAnchor>
+      <StyledAnchor href="https://www.github.com/zenulous" className="nav-link">
+        <FontAwesomeIcon icon={faGithub} size="2x"></FontAwesomeIcon>
+      </StyledAnchor>
     </Navbar>
   );
 }
