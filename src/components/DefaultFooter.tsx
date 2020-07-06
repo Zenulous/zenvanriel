@@ -28,7 +28,7 @@ export default function DefaultFooter() {
   return (
     <FooterDiv>
       <StyledImg src={gatsbySvg}></StyledImg>
-      <FooterText>This site was built by me using Gatsby</FooterText>
+      <FooterText>This site was programmed by me using Gatsby</FooterText>
     </FooterDiv>
   );
 }
