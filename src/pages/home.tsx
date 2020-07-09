@@ -5,6 +5,7 @@ import Metadata from "../components/Metadata";
 import DefaultFooter from "../components/DefaultFooter";
 import certificationDeveloper from "../../static/assets/certificationDeveloper.png";
 import certificationDevOps from "../../static/assets/certificationDevOps.png";
+import certificationAI from "../../static/assets/certificationAI.png";
 import {styled} from "styletron-react";
 
 const CertificateIcon = styled("img", {height: "100%", float: "left"});
@@ -42,6 +43,7 @@ export default class Home extends React.Component<RouteComponentProps> {
           <CertficateContainer>
             <CertificateIcon src={certificationDeveloper}></CertificateIcon>
             <CertificateIcon src={certificationDevOps}></CertificateIcon>
+            <CertificateIcon src={certificationAI}></CertificateIcon>
           </CertficateContainer>
         </div>
         <DefaultFooter />
