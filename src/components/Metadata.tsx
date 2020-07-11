@@ -32,6 +32,10 @@ export default function Metadata(props: {
         content={useDefaultImage ? defaultImageUrl : props.imageUrl}
       />
       <meta property="og:description" content={props.description} />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap"
+        rel="stylesheet"
+      ></link>
     </Helmet>
   );
 }
