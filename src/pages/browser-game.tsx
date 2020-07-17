@@ -14,7 +14,7 @@ export default class BrowserGame extends React.Component {
     showGame: false,
   };
 
-  constructor(props: Readonly<RouteComponentProps<{}>>) {
+  constructor(props) {
     super(props);
     this.handleShowGameState = this.handleShowGameState.bind(this);
   }
