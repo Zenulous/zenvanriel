@@ -1,5 +1,4 @@
 import React from "react";
-import {RouteComponentProps} from "@reach/router";
 import DefaultNavbar from "../components/DefaultNavbar";
 import Metadata from "../components/Metadata";
 import Button from "@material-ui/core/Button";
@@ -8,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSadTear} from "@fortawesome/free-solid-svg-icons";
 import {CenteredFlexBox} from "../styles/CenteredFlexBox";
 
-export default class BrowserGame extends React.Component<RouteComponentProps> {
+export default class BrowserGame extends React.Component {
   gameCanvas: HTMLCanvasElement;
 
   state = {

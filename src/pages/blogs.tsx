@@ -1,5 +1,4 @@
 import React from "react";
-import {RouteComponentProps} from "@reach/router";
 import DefaultNavbar from "../components/DefaultNavbar";
 import Metadata from "../components/Metadata";
 import {styled} from "styletron-react";
@@ -14,11 +13,9 @@ const BlogCardMedia = styled(CardMedia, {
   backgroundSize: "contain !important",
 });
 const BlogCardActions = styled(CardActions, {justifyContent: "center"});
-export default class Home extends React.Component<
-  RouteComponentProps & {
-    data: any;
-  }
-> {
+export default class Home extends React.Component<{
+  data: any;
+}> {
   render() {
     return (
       <div>

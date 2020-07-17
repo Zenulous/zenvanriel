@@ -1,5 +1,4 @@
 import React from "react";
-import {RouteComponentProps} from "@reach/router";
 import DefaultNavbar from "../components/DefaultNavbar";
 import Metadata from "../components/Metadata";
 import DefaultFooter from "../components/DefaultFooter";
@@ -8,10 +7,14 @@ import certificationDevOps from "../../static/assets/certificationDevOps.png";
 import certificationAI from "../../static/assets/certificationAI.png";
 import {styled} from "styletron-react";
 
-const CertificateIcon = styled("img", {height: "100%", float: "left"});
-const CertficateContainer = styled("div", {height: "18vh", width: "100%"});
+const CertificateIcon = styled("img", {width: "max-content"});
+const CertficateContainer = styled("div", {
+  display: "flex",
+  flexWrap: "wrap",
+  width: "100%",
+});
 
-export default class Home extends React.Component<RouteComponentProps> {
+export default class Home extends React.Component {
   render() {
     return (
       <div>

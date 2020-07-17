@@ -1,5 +1,4 @@
 import React from "react";
-import {RouteComponentProps} from "@reach/router";
 import DefaultNavbar from "../components/DefaultNavbar";
 import Metadata from "../components/Metadata";
 import codingRepositories from "../data/codingRepositories";
@@ -8,9 +7,7 @@ import IconButton from "@material-ui/core/IconButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 
-export default class CodingRepositories extends React.Component<
-  RouteComponentProps
-> {
+export default class CodingRepositories extends React.Component {
   render() {
     return (
       <div>

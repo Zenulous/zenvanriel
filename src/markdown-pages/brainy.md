@@ -47,7 +47,7 @@ The Brainy bot enables a fast and simple process flow through the use of customi
 
 # Architecture
 
-<img  src="https://github.com/microsoft/microsoft-teams-brainy-bot/wiki/.attachments/architecture.png" width=50%>
+<img  src="https://github.com/microsoft/microsoft-teams-brainy-bot/wiki/.attachments/architecture.png" width="600px">
 
 ## Brainy Bot
 
