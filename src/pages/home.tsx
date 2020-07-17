@@ -7,7 +7,7 @@ import certificationDevOps from "../../static/assets/certificationDevOps.png";
 import certificationAI from "../../static/assets/certificationAI.png";
 import {styled} from "styletron-react";
 
-const CertificateIcon = styled("img", {width: "max-content"});
+const CertificateIcon = styled("img", {width: "250px"});
 const CertficateContainer = styled("div", {
   display: "flex",
   flexWrap: "wrap",
