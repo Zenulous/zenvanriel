@@ -5,6 +5,7 @@ import DefaultFooter from "../components/DefaultFooter";
 import certificationDeveloper from "../../static/assets/certificationDeveloper.png";
 import certificationDevOps from "../../static/assets/certificationDevOps.png";
 import certificationAI from "../../static/assets/certificationAI.png";
+import certificationArchitect from "../../static/assets/certificationArchitect.png";
 import {styled} from "styletron-react";
 
 const CertificateIcon = styled("img", {width: "250px"});
@@ -42,11 +43,15 @@ export default class Home extends React.Component {
           </p>
           <br />
           <h2>Current Certifications</h2>
-          <h3>Developer Oriented</h3>
+          <h3>Software Development</h3>
           <CertficateContainer>
             <CertificateIcon src={certificationDeveloper}></CertificateIcon>
             <CertificateIcon src={certificationDevOps}></CertificateIcon>
             <CertificateIcon src={certificationAI}></CertificateIcon>
+          </CertficateContainer>
+          <h3>Software Architecture</h3>
+          <CertficateContainer>
+            <CertificateIcon src={certificationArchitect}></CertificateIcon>
           </CertficateContainer>
         </div>
         <DefaultFooter />
