@@ -39,7 +39,7 @@ export default class Home extends React.Component {
             and finishing up my bachelor in Artificial Intelligence. I like to
             work with software across different technology stacks. Currently my
             main forte is programming in TypeScript to rapidly develop cloud
-            native apps on Azure.
+            native apps on Azure. Alternatively, I am also a fan of C# and Python where applicable.
           </p>
           <br />
           <h2>Current Certifications</h2>
