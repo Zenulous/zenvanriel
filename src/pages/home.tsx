@@ -6,9 +6,11 @@ import certificationDeveloper from "../../static/assets/certificationDeveloper.p
 import certificationDevOps from "../../static/assets/certificationDevOps.png";
 import certificationAI from "../../static/assets/certificationAI.png";
 import certificationArchitect from "../../static/assets/certificationArchitect.png";
+import certificationDataScientist from "../../static/assets/certificationDataScientist.png";
+import certificationTrainer from "../../static/assets/certificationTrainer.png";
 import {styled} from "styletron-react";
 
-const CertificateIcon = styled("img", {width: "250px"});
+const CertificateIcon = styled("img", {width: "175px"});
 const CertficateContainer = styled("div", {
   display: "flex",
   flexWrap: "wrap",
@@ -35,23 +37,30 @@ export default class Home extends React.Component {
           <br />
           <h2>At a glance</h2>
           <p>
-            Currently active as a Cloud Solutions Architect intern at Microsoft
-            and finishing up my bachelor in Artificial Intelligence. I like to
-            work with software across different technology stacks. Currently my
-            main forte is programming in TypeScript to rapidly develop cloud
-            native apps on Azure. Alternatively, I am also a fan of C# and Python where applicable.
+            I like to work with software across different technology stacks.
+            Using TypeScript and/or C# I enjoy rapidly developing cloud native
+            applications on Azure. Alternatively, I am also a fan of using
+            Python for the occasional data related project.
           </p>
           <br />
           <h2>Current Certifications</h2>
-          <h3>Software Development</h3>
+          <h4>Software Development</h4>
           <CertficateContainer>
             <CertificateIcon src={certificationDeveloper}></CertificateIcon>
             <CertificateIcon src={certificationDevOps}></CertificateIcon>
             <CertificateIcon src={certificationAI}></CertificateIcon>
           </CertficateContainer>
-          <h3>Software Architecture</h3>
+          <h4>Software Architecture</h4>
           <CertficateContainer>
             <CertificateIcon src={certificationArchitect}></CertificateIcon>
+          </CertficateContainer>
+          <h4>Data Science</h4>
+          <CertficateContainer>
+            <CertificateIcon src={certificationDataScientist}></CertificateIcon>
+          </CertficateContainer>
+          <h4>Miscellaneous</h4>
+          <CertficateContainer>
+            <CertificateIcon src={certificationTrainer}></CertificateIcon>
           </CertficateContainer>
         </div>
         <DefaultFooter />
