@@ -8,6 +8,7 @@ import certificationAI from "../../static/assets/certificationAI.png";
 import certificationArchitect from "../../static/assets/certificationArchitect.png";
 import certificationDataScientist from "../../static/assets/certificationDataScientist.png";
 import certificationTrainer from "../../static/assets/certificationTrainer.png";
+import certificationDataEngineer from "../../static/assets/certificationDataEngineer.png";
 import {styled} from "styletron-react";
 
 const CertificateIcon = styled("img", {width: "175px"});
@@ -50,13 +51,14 @@ export default class Home extends React.Component {
             <CertificateIcon src={certificationDevOps}></CertificateIcon>
             <CertificateIcon src={certificationAI}></CertificateIcon>
           </CertficateContainer>
-          <h4>Software Architecture</h4>
-          <CertficateContainer>
-            <CertificateIcon src={certificationArchitect}></CertificateIcon>
-          </CertficateContainer>
           <h4>Data Science</h4>
           <CertficateContainer>
             <CertificateIcon src={certificationDataScientist}></CertificateIcon>
+            <CertificateIcon src={certificationDataEngineer}></CertificateIcon>
+          </CertficateContainer>
+          <h4>Software Architecture</h4>
+          <CertficateContainer>
+            <CertificateIcon src={certificationArchitect}></CertificateIcon>
           </CertficateContainer>
           <h4>Miscellaneous</h4>
           <CertficateContainer>
