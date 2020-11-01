@@ -3,7 +3,6 @@ slug: "/brainy-bot"
 title: "Zen van Riel - Brainy"
 description: "Brainy is a Microsoft Teams app (bot) that helps a team with the allocation of tasks"
 imageUrl: "www.zenvanriel.nl/icons/brainy.svg"
-date: "0-0-0000"
 ---
 
 The Brainy bot is an app template for Microsoft Teams. Finding the right person for a specific task can be a challenge, especially when different roles within an organization must work as a team. Brainy makes the collaboration across these roles more structured and efficient by orchestrating its flow.

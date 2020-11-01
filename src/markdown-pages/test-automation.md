@@ -3,7 +3,6 @@ slug: "/test-automation"
 title: "Zen van Riel - Test Automation"
 description: "Page denoting my test automation experience."
 imageUrl: ""
-date: "0-0-0000"
 ---
 
 Testing code automatically is essential, especially as the complexity of a program increases. I have experience in writing unit tests using modules such as Jest and Mocha.

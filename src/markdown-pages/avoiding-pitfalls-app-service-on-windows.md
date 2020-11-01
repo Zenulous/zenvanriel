@@ -3,7 +3,6 @@ slug: "/blogs/nodejs-windows-app-service"
 title: "Zen van Riel - Avoiding pitfalls when deploying Node.JS code to Windows App Service"
 description: "Blog post about avoiding common problems with deploying a Node.JS app to Azure Windows App Service"
 imageUrl: "https://miro.medium.com/max/700/1*f_058fMFtUNYJUi3HI-49A.png"
-date: "21-2-2020"
 ---
 
 <br>
