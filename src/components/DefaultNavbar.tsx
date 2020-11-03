@@ -2,11 +2,11 @@ import * as React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import logoIcon from "../../static/icons/logo.svg";
 import brainyIcon from "../../static/icons/brainy.svg";
-import {Link} from "gatsby";
+import { Link } from "gatsby";
 import "bootstrap/dist/css/bootstrap.css";
-import {styled} from "styletron-react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import { styled } from "styletron-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const StyledAnchor = styled("a", {
   padding: 0,

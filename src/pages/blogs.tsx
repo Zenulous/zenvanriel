@@ -1,18 +1,23 @@
 import React from "react";
 import DefaultNavbar from "../components/DefaultNavbar";
 import Metadata from "../components/Metadata";
-import {styled} from "styletron-react";
-import {graphql, Link} from "gatsby";
+import { styled } from "styletron-react";
+import { graphql, Link } from "gatsby";
 import Card from "@material-ui/core/Card";
-import {CardContent, Typography, CardActions, Button} from "@material-ui/core";
+import {
+  CardContent,
+  Typography,
+  CardActions,
+  Button,
+} from "@material-ui/core";
 import CardMedia from "@material-ui/core/CardMedia";
 
-const BlogCard = styled(Card, {marginTop: "25px"});
+const BlogCard = styled(Card, { marginTop: "25px" });
 const BlogCardMedia = styled(CardMedia, {
   height: "250px",
   backgroundSize: "contain !important",
 });
-const BlogCardActions = styled(CardActions, {justifyContent: "center"});
+const BlogCardActions = styled(CardActions, { justifyContent: "center" });
 export default class Home extends React.Component<{
   data: any;
 }> {
@@ -56,7 +61,7 @@ export default class Home extends React.Component<{
 
 export const pageQuery = graphql`
   query BlogQuery {
-    allMarkdownRemark(filter: {frontmatter: {slug: {glob: "/blogs/*"}}}) {
+    allMarkdownRemark(filter: { frontmatter: { slug: { glob: "/blogs/*" } } }) {
       edges {
         node {
           excerpt

@@ -1,8 +1,8 @@
 import * as React from "react";
 import DefaultNavbar from "../components/DefaultNavbar";
-import {CenteredFlexBox} from "../styles/CenteredFlexBox";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSadTear} from "@fortawesome/free-solid-svg-icons";
+import { CenteredFlexBox } from "../styles/CenteredFlexBox";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSadTear } from "@fortawesome/free-solid-svg-icons";
 import DefaultFooter from "../components/DefaultFooter";
 
 export default function NotFoundPage() {

@@ -3,9 +3,9 @@ import DefaultNavbar from "../components/DefaultNavbar";
 import Metadata from "../components/Metadata";
 import Button from "@material-ui/core/Button";
 import "../css/browser-game.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSadTear} from "@fortawesome/free-solid-svg-icons";
-import {CenteredFlexBox} from "../styles/CenteredFlexBox";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSadTear } from "@fortawesome/free-solid-svg-icons";
+import { CenteredFlexBox } from "../styles/CenteredFlexBox";
 
 export default class BrowserGame extends React.Component {
   gameCanvas: HTMLCanvasElement;
@@ -52,12 +52,12 @@ export default class BrowserGame extends React.Component {
   handleShowGameState() {
     const windowThreshold = 500;
     if (document.documentElement.clientWidth <= windowThreshold) {
-      this.setState({showGame: false});
+      this.setState({ showGame: false });
       return;
     }
 
     if (document.documentElement.clientWidth > windowThreshold) {
-      this.setState({showGame: true});
+      this.setState({ showGame: true });
     }
   }
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import {styled} from "styletron-react";
+import { styled } from "styletron-react";
 import gatsbySvg from "../../static/icons/gatsby.svg";
 
 const FooterDiv = styled("footer", {

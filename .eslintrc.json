@@ -1,6 +1,11 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "eslint-plugin-react", "jsx-a11y"],
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-react",
+    "jsx-a11y",
+    "prettier"
+  ],
   "parserOptions": {
     "jsx": true,
     "ecmaVersion": 2018,
@@ -10,9 +15,20 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
   ],
   "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": false,
+        "trailingComma": "es5",
+        "arrowParens": "avoid",
+        "endOfLine": "auto"
+      }
+    ],
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/camelcase": "off",

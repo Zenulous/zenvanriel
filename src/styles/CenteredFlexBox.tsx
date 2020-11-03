@@ -1,4 +1,4 @@
-import {styled} from "styletron-react";
+import { styled } from "styletron-react";
 
 export const CenteredFlexBox = styled("div", {
   display: "flex",

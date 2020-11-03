@@ -4,8 +4,8 @@ import Metadata from "../components/Metadata";
 import codingRepositories from "../data/codingRepositories";
 import Card from "react-bootstrap/Card";
 import IconButton from "@material-ui/core/IconButton";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default class CodingRepositories extends React.Component {
   render() {

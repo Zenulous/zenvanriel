@@ -9,9 +9,9 @@ import certificationArchitect from "../../static/assets/certificationArchitect.p
 import certificationDataScientist from "../../static/assets/certificationDataScientist.png";
 import certificationTrainer from "../../static/assets/certificationTrainer.png";
 import certificationDataEngineer from "../../static/assets/certificationDataEngineer.png";
-import {styled} from "styletron-react";
+import { styled } from "styletron-react";
 
-const CertificateIcon = styled("img", {width: "175px"});
+const CertificateIcon = styled("img", { width: "175px" });
 const CertficateContainer = styled("div", {
   display: "flex",
   flexWrap: "wrap",

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import {graphql} from "gatsby";
+import { graphql } from "gatsby";
 import Metadata from "../components/Metadata";
 import DefaultNavbar from "../components/DefaultNavbar";
 
@@ -13,7 +13,7 @@ interface MarkdownRemark {
   };
   html: string;
 }
-export default function Template({data}) {
+export default function Template({ data }) {
   const markdownRemark = data.markdownRemark as MarkdownRemark;
   const blogTitle = markdownRemark.frontmatter.title.split("- ")[1];
   return (
@@ -29,7 +29,7 @@ export default function Template({data}) {
 
         <div
           className="blog-post-content"
-          dangerouslySetInnerHTML={{__html: markdownRemark.html}}
+          dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
         />
       </div>
     </div>
@@ -38,7 +38,7 @@ export default function Template({data}) {
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         slug
