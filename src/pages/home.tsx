@@ -10,6 +10,7 @@ import certificationDataScientist from "../../static/assets/certificationDataSci
 import certificationTrainer from "../../static/assets/certificationTrainer.png";
 import certificationDataEngineer from "../../static/assets/certificationDataEngineer.png";
 import certificationAdministrator from "../../static/assets/certificationAdministrator.png";
+import certificationCKAD from "../../static/assets/certificationCKAD.png";
 
 import { styled } from "styletron-react";
 
@@ -52,6 +53,7 @@ export default class Home extends React.Component {
             <CertificateIcon src={certificationDeveloper}></CertificateIcon>
             <CertificateIcon src={certificationDevOps}></CertificateIcon>
             <CertificateIcon src={certificationAI}></CertificateIcon>
+            <CertificateIcon src={certificationCKAD}></CertificateIcon>
           </CertficateContainer>
           <h4>Data Science</h4>
           <CertficateContainer>
