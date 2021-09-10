@@ -42,9 +42,11 @@ export default class Home extends React.Component {
           <h2>At a glance</h2>
           <p>
             I like to work with software across different technology stacks.
-            Using TypeScript and/or C# I enjoy rapidly developing cloud native
-            applications on Azure. Alternatively, I am also a fan of using
-            Python for the occasional data related project.
+            Using TypeScript as my favourite programming language I enjoy
+            rapidly developing cloud native applications on Azure.
+            Alternatively, I am also a fan of using C# for backend applications
+            or Python for the occasional data related project. Last but not
+            least, React is my go-to frontend framework!
           </p>
           <br />
           <h2>Current Certifications</h2>
