@@ -2,6 +2,7 @@ import * as React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import logoIcon from "../../static/icons/logo.svg";
 import brainyIcon from "../../static/icons/brainy.svg";
+import friendlyFlowsIcon from "../../static/icons/friendlyflows.png";
 import { Link } from "gatsby";
 import "bootstrap/dist/css/bootstrap.css";
 import { styled } from "styletron-react";
@@ -41,6 +42,10 @@ export default function DefaultNavbar() {
         <Link to="/brainy-bot" className="nav-link">
           <img className="default-icon" src={brainyIcon} />
           Brainy
+        </Link>
+        <Link to="https://friendlyflows.com/" className="nav-link">
+          <img className="default-icon" src={friendlyFlowsIcon} />
+          Friendly Flows
         </Link>
       </Navbar.Collapse>
 
