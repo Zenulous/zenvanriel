@@ -1,20 +1,15 @@
 import React from "react";
-import DefaultNavbar from "../components/DefaultNavbar";
-import Metadata from "../components/Metadata";
-import Button from "@material-ui/core/Button";
 import "../css/browser-game.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSadTear } from "@fortawesome/free-solid-svg-icons";
-import { CenteredFlexBox } from "../styles/CenteredFlexBox";
+import { SEO } from "../components/seo";
 
 export default class BrowserGame extends React.Component {
-  gameCanvas: HTMLCanvasElement;
+  gameCanvas!: HTMLCanvasElement;
 
   state = {
     showGame: false,
   };
 
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.handleShowGameState = this.handleShowGameState.bind(this);
   }
@@ -75,9 +70,6 @@ export default class BrowserGame extends React.Component {
       </div>
     ) : (
       <div>
-        <CenteredFlexBox>
-          <FontAwesomeIcon icon={faSadTear} size="10x"></FontAwesomeIcon>
-        </CenteredFlexBox>
         <p>
           Your browser does not support this game. This could be because you are
           on a mobile device. If you are on a desktop, please enlarge the width
@@ -88,13 +80,9 @@ export default class BrowserGame extends React.Component {
 
     const subGameInformation = this.state.showGame ? (
       <div className="right-aligned-content-footer">
-        <Button
-          variant="outlined"
-          color="primary"
-          onClick={() => this.gameCanvas.requestFullscreen()}
-        >
+        <button onClick={() => this.gameCanvas!.requestFullscreen()}>
           Enable Fullscreen
-        </Button>
+        </button>
 
         <i>
           Assets retrieved from{" "}
@@ -107,16 +95,11 @@ export default class BrowserGame extends React.Component {
 
     return (
       <div>
-        <Metadata
-          title={"Zen van Riel - Browser Game"}
-          description={"Small browser game playable by 1-2 people."}
-        />
-        <DefaultNavbar />
         <div className="container">
           <h1>Browser Game</h1>
           {mainGameInformation}
           <canvas
-            ref={ref => (this.gameCanvas = ref)}
+            ref={(ref) => (this.gameCanvas = ref as HTMLCanvasElement)}
             data-processing-sources="../bluehat/bluehat.pde"
             width="1280"
             height="720"
@@ -127,3 +110,5 @@ export default class BrowserGame extends React.Component {
     );
   }
 }
+
+export const Head = () => <SEO />;
