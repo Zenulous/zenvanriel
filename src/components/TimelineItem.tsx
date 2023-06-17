@@ -1,30 +1,34 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import styled from "styled-components";
 
 const TimelineItemContainer = styled.div<
   Pick<TimelineItemProps, "position" | "width">
 >`
-  position: absolute;
-  z-index: ${(props) => 1000 - props.position.top || 0};
+  position: ${(props) => props.position.type};
+  z-index: ${(props) => props.position.zIndex};
   width: ${(props) => props.width || 0}px;
-  height: 75px;
-  top: ${(props) => props.position.top || 0}%;
-  left: ${(props) => props.position.left || 0}%;
+  max-width: 100vw;
+  height: 65px;
+  top: ${(props) => props.position.top}%;
+  left: ${(props) => props.position.left}%;
   background-blend-mode: color-dodge, normal;
-  backdrop-filter: blur(300px);
+  backdrop-filter: blur(130px);
   border-radius: 31px;
 `;
 
-const DescriptionPopup = styled.div<Pick<TimelineItemProps, "width">>`
+const DescriptionPopup = styled.div<
+  Pick<TimelineItemProps, "position" | "width">
+>`
   position: absolute;
-  z-index: 4;
+  z-index: ${(props) => props.position.zIndex};
   width: ${(props) => props.width + 75 || 0}px;
+  margin-top: 65px;
   min-width: 200px;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   color: white;
-  display: none;
+  max-width: 100%;
   word-wrap: break-word;
   white-space: pre-line;
 `;
@@ -37,6 +41,8 @@ export interface TimelineItemProps {
   position: {
     top: number;
     left: number;
+    type: string;
+    zIndex: number;
   };
 }
 
@@ -54,6 +60,7 @@ const TimelineItemContent = styled.div`
 const TimelineImage = styled.div`
   margin-left: 10px;
   max-height: 50px;
+  width: 40px;
 `;
 
 const TimelineItemText = styled.div`
@@ -72,35 +79,29 @@ export default function TimelineItem({
   width,
   position,
 }: TimelineItemProps): JSX.Element {
-  console.log(width);
+  const [showDescription, setShowDescription] = useState(false);
   return (
-    <TimelineItemContainer
-      position={position}
-      width={width}
-      onMouseEnter={(e) => {
-        (
-          e.currentTarget.querySelector(DescriptionPopup) as HTMLElement
-        ).style.display = "flex";
-        (
-          e.currentTarget.querySelector(TimelineItemContent) as HTMLElement
-        ).style.display = "none";
-      }}
-      onMouseLeave={(e) => {
-        (
-          e.currentTarget.querySelector(DescriptionPopup) as HTMLElement
-        ).style.display = "none";
-        (
-          e.currentTarget.querySelector(TimelineItemContent) as HTMLElement
-        ).style.display = "flex";
-      }}
-    >
-      <DescriptionPopup width={width}>
-        <div style={{ padding: "8px" }}>{description}</div>
-      </DescriptionPopup>
-      <TimelineItemContent>
-        <TimelineImage>{imageComponent}</TimelineImage>
-        <TimelineItemText>{title}</TimelineItemText>
-      </TimelineItemContent>
-    </TimelineItemContainer>
+    <div>
+      <TimelineItemContainer
+        position={position}
+        width={width}
+        onMouseOver={(e) => {
+          setShowDescription(true);
+        }}
+        onMouseOut={(e) => {
+          setShowDescription(false);
+        }}
+      >
+        {showDescription && (
+          <DescriptionPopup position={position} width={width}>
+            <div style={{ padding: "8px" }}>{description}</div>
+          </DescriptionPopup>
+        )}
+        <TimelineItemContent>
+          <TimelineImage>{imageComponent}</TimelineImage>
+          <TimelineItemText>{title}</TimelineItemText>
+        </TimelineItemContent>
+      </TimelineItemContainer>
+    </div>
   );
 }
