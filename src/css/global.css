@@ -5,3 +5,7 @@ html * {
 a {
   color: rgb(85,190,225)
 }
+
+body {
+  margin: 0px;
+}
