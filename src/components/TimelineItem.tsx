@@ -22,20 +22,17 @@ const TimelineItemContainer = styled.div<
   }
 `;
 
-const DescriptionPopup = styled.div<
-  Pick<TimelineItemProps, "position" | "width">
->`
+const DescriptionPopup = styled.div<Pick<TimelineItemProps, "position">>`
   position: absolute;
   display: none;
   z-index: ${(props) => props.position.zIndex};
-  width: ${(props) => props.width + 75 || 0}px;
   margin-top: 65px;
   min-width: 200px;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   color: white;
-  max-width: 100%;
+  width: 100%;
   word-wrap: break-word;
   white-space: pre-line;
 `;
