@@ -12,7 +12,7 @@ const TimelineItemContainer = styled.div<
   top: ${(props) => props.position.top}%;
   left: ${(props) => props.position.left}%;
   background-blend-mode: color-dodge, normal;
-  backdrop-filter: blur(70px);
+  backdrop-filter: blur(350px);
   border-radius: 31px;
   @media (max-width: 900px) {
     top: 0;
@@ -105,11 +105,7 @@ export default function TimelineItem({
           }
         }}
       >
-        <DescriptionPopup
-          ref={descriptionRef}
-          position={position}
-          width={width}
-        >
+        <DescriptionPopup ref={descriptionRef} position={position}>
           <div style={{ padding: "8px" }}>{description}</div>
         </DescriptionPopup>
 
