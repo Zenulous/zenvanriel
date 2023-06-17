@@ -51,9 +51,9 @@ export function TopBar() {
       </SiteName>
 
       <MenuItems>
-        <MenuItem>Professional Portfolio</MenuItem>
+        {/* <MenuItem>Professional Portfolio</MenuItem>
         <MenuItem>Browser Game</MenuItem>
-        <MenuItem>Certifications</MenuItem>
+        <MenuItem>Certifications</MenuItem> */}
       </MenuItems>
     </TopBarContainer>
   );
