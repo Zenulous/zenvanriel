@@ -3,6 +3,7 @@ import type { PageProps } from "gatsby";
 import { SEO } from "../components/seo";
 import TimelineItem, { TimelineItemProps } from "../components/TimelineItem";
 import { StaticImage } from "gatsby-plugin-image";
+import { useMediaQuery } from "@react-hook/media-query";
 
 const pageStyles = {
   color: "#232129",
@@ -25,8 +26,10 @@ Software Engineer II`,
     ),
     width: 300,
     position: {
-      top: 25,
+      top: 26,
       left: 48,
+      type: "absolute",
+      zIndex: 8,
     },
     description: `• Developed Support Copilot: Increased self-help for users with any kind of problem on GitHub
 
@@ -52,6 +55,8 @@ Software Engineer II`,
     position: {
       top: 31,
       left: 13,
+      type: "absolute",
+      zIndex: 7,
     },
     description: `•  Developed, delivered and maintained cloud-native Kubernetes environments
 
@@ -77,6 +82,8 @@ Software Engineer II`,
     position: {
       top: 40,
       left: 47,
+      type: "absolute",
+      zIndex: 6,
     },
     description: (
       <div>
@@ -112,6 +119,8 @@ Software Engineer II`,
     position: {
       top: 48,
       left: 12,
+      type: "absolute",
+      zIndex: 5,
     },
     imageComponent: (
       <StaticImage
@@ -141,6 +150,8 @@ Software Engineer II`,
     position: {
       top: 57,
       left: 57,
+      type: "absolute",
+      zIndex: 4,
     },
     description: (
       <div>
@@ -168,6 +179,8 @@ Software Engineer II`,
     position: {
       top: 64,
       left: 11,
+      type: "absolute",
+      zIndex: 3,
     },
     description: (
       <div>
@@ -214,6 +227,8 @@ Software Engineer II`,
     position: {
       top: 73,
       left: 56,
+      type: "absolute",
+      zIndex: 2,
     },
   },
   {
@@ -237,24 +252,63 @@ Software Engineer II`,
     position: {
       top: 85,
       left: 18,
+      type: "absolute",
+      zIndex: 1,
     },
   },
 ];
 
 const IndexPage: React.FC<PageProps> = () => {
+  const isMobile = useMediaQuery("only screen and (max-width: 900px)");
+  console.log(isMobile);
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
       <div style={{ position: "relative", maxWidth: 996 }}>
-        {jobs.map((job) => (
-          <TimelineItem
-            title={job.title}
-            width={job.width}
-            description={job.description}
-            imageComponent={job.imageComponent}
-            position={job.position}
-          ></TimelineItem>
-        ))}
+        {isMobile ? (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              position: "absolute",
+              justifyContent: "space-around",
+              alignItems: "center",
+              width: "100%",
+              marginTop: "5%",
+              marginBottom: "5%",
+              height: "90%",
+            }}
+          >
+            {jobs.map((job) => (
+              <TimelineItem
+                key={job.title}
+                title={job.title}
+                width={450}
+                description={job.description}
+                imageComponent={job.imageComponent}
+                position={{
+                  top: 0,
+                  left: 0,
+                  type: "relative",
+                  zIndex: job.position.zIndex,
+                }}
+              ></TimelineItem>
+            ))}
+          </div>
+        ) : (
+          <div>
+            {jobs.map((job) => (
+              <TimelineItem
+                key={job.title}
+                title={job.title}
+                width={job.width}
+                description={job.description}
+                imageComponent={job.imageComponent}
+                position={job.position}
+              ></TimelineItem>
+            ))}
+          </div>
+        )}
         <StaticImage
           src="../images/river.png"
           alt="River Image"
