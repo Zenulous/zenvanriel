@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
       options: {
         name: "Zen van Riel",
         short_name: "Zen van Riel",
-        icon: "static/logo.png",
+        icon: "src/images/logo.png",
       },
     },
   ],
