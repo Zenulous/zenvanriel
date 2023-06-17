@@ -3,7 +3,7 @@ import type { PageProps } from "gatsby";
 import { SEO } from "../components/seo";
 import TimelineItem, { TimelineItemProps } from "../components/TimelineItem";
 import { StaticImage } from "gatsby-plugin-image";
-import { useMediaQuery } from "@react-hook/media-query";
+import styled from "styled-components";
 
 const pageStyles = {
   color: "#232129",
@@ -258,62 +258,47 @@ Software Engineer II`,
   },
 ];
 
+const TimelineItems = styled.div`
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 90%;
+    position: relative;
+  }
+`;
+console.log(TimelineItems);
+
 const IndexPage: React.FC<PageProps> = () => {
-  const isMobile = useMediaQuery("only screen and (max-width: 900px)");
-  console.log(isMobile);
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
-      <div style={{ position: "relative", maxWidth: 996 }}>
-        {isMobile ? (
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              position: "absolute",
-              justifyContent: "space-around",
-              alignItems: "center",
-              width: "100%",
-              marginTop: "5%",
-              marginBottom: "5%",
-              height: "90%",
-            }}
-          >
-            {jobs.map((job) => (
-              <TimelineItem
-                key={job.title}
-                title={job.title}
-                width={450}
-                description={job.description}
-                imageComponent={job.imageComponent}
-                position={{
-                  top: 0,
-                  left: 0,
-                  type: "relative",
-                  zIndex: job.position.zIndex,
-                }}
-              ></TimelineItem>
-            ))}
-          </div>
-        ) : (
-          <div>
-            {jobs.map((job) => (
-              <TimelineItem
-                key={job.title}
-                title={job.title}
-                width={job.width}
-                description={job.description}
-                imageComponent={job.imageComponent}
-                position={job.position}
-              ></TimelineItem>
-            ))}
-          </div>
-        )}
+      <div style={{ position: "relative", maxWidth: 996, height: "1200px" }}>
         <StaticImage
           src="../images/river.png"
           alt="River Image"
           placeholder="blurred"
-        />
+          style={{
+            position: "absolute",
+            minHeight: "100%",
+          }}
+        ></StaticImage>
+        <TimelineItems>
+          {jobs.map((job) => (
+            <TimelineItem
+              key={job.title}
+              title={job.title}
+              width={job.width}
+              description={job.description}
+              imageComponent={job.imageComponent}
+              position={job.position}
+            ></TimelineItem>
+          ))}
+        </TimelineItems>
       </div>
     </main>
   );

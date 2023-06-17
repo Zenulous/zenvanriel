@@ -7,19 +7,26 @@ const TimelineItemContainer = styled.div<
   position: ${(props) => props.position.type};
   z-index: ${(props) => props.position.zIndex};
   width: ${(props) => props.width || 0}px;
-  max-width: 100vw;
-  height: 65px;
+  max-width: 95vw;
+  height: 75px;
   top: ${(props) => props.position.top}%;
   left: ${(props) => props.position.left}%;
   background-blend-mode: color-dodge, normal;
-  backdrop-filter: blur(130px);
+  backdrop-filter: blur(70px);
   border-radius: 31px;
+  @media (max-width: 900px) {
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 450px;
+  }
 `;
 
 const DescriptionPopup = styled.div<
   Pick<TimelineItemProps, "position" | "width">
 >`
   position: absolute;
+  display: none;
   z-index: ${(props) => props.position.zIndex};
   width: ${(props) => props.width + 75 || 0}px;
   margin-top: 65px;
@@ -61,6 +68,11 @@ const TimelineImage = styled.div`
   margin-left: 10px;
   max-height: 50px;
   width: 40px;
+  @media (max-width: 400px) {
+    margin-left: 5px;
+    max-height: 50px;
+    width: 20px;
+  }
 `;
 
 const TimelineItemText = styled.div`
@@ -79,24 +91,31 @@ export default function TimelineItem({
   width,
   position,
 }: TimelineItemProps): JSX.Element {
-  const [showDescription, setShowDescription] = useState(false);
+  const descriptionRef = React.useRef<HTMLDivElement>(null);
   return (
     <div>
       <TimelineItemContainer
         position={position}
         width={width}
         onMouseOver={(e) => {
-          setShowDescription(true);
+          if (descriptionRef.current) {
+            descriptionRef.current.style.display = "block";
+          }
         }}
         onMouseOut={(e) => {
-          setShowDescription(false);
+          if (descriptionRef.current) {
+            descriptionRef.current.style.display = "none";
+          }
         }}
       >
-        {showDescription && (
-          <DescriptionPopup position={position} width={width}>
-            <div style={{ padding: "8px" }}>{description}</div>
-          </DescriptionPopup>
-        )}
+        <DescriptionPopup
+          ref={descriptionRef}
+          position={position}
+          width={width}
+        >
+          <div style={{ padding: "8px" }}>{description}</div>
+        </DescriptionPopup>
+
         <TimelineItemContent>
           <TimelineImage>{imageComponent}</TimelineImage>
           <TimelineItemText>{title}</TimelineItemText>
