@@ -5,11 +5,10 @@ import styled from "styled-components";
 const Container = styled.span`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
   width: 95%;
   margin: 53.44px 0 32px 0;
-  max-width: 850px;
   word-break: normal;
   @media screen and (max-width: 500px) {
     flex-direction: column;

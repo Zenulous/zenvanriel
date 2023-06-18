@@ -35,7 +35,23 @@ const MenuItems = styled.ul`
 `;
 
 const MenuItem = styled.li`
-  font-size: 14px;
+  font-size: 17px;
+  position: relative;
+  margin-left: 10px;
+  padding-right: 10px;
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #0056b3;
+    top: 50%;
+
+    right: -8px;
+    transform: translateY(-50%);
+  }
 `;
 
 export function TopBar() {
@@ -59,6 +75,9 @@ export function TopBar() {
         </MenuItem>
         <MenuItem>
           <Link to="/browser-game">Browser Game</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/certifications">Certifications</Link>
         </MenuItem>
       </MenuItems>
     </TopBarContainer>
