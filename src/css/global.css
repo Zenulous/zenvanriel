@@ -3,9 +3,12 @@ html * {
 }
 
 a {
-  color: rgb(85,190,225)
+  color: rgb(61,155,235);
+  &:hover {
+    color: #0056b3;
+  }
+  text-decoration: none;
 }
-
 body {
     margin: 0px;
 }

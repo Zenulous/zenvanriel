@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
@@ -40,20 +41,25 @@ const MenuItem = styled.li`
 export function TopBar() {
   return (
     <TopBarContainer>
-      <SiteName>
-        <StaticImage
-          src="../images/logo.png"
-          alt="Zen Icon"
-          placeholder="blurred"
-          height={50}
-        />
-        Zen van Riel
-      </SiteName>
+      <Link to="/">
+        <SiteName>
+          <StaticImage
+            src="../images/logo.png"
+            alt="Zen Icon"
+            placeholder="blurred"
+            height={50}
+          />
+          Zen van Riel
+        </SiteName>
+      </Link>
 
       <MenuItems>
-        {/* <MenuItem>Professional Portfolio</MenuItem>
-        <MenuItem>Browser Game</MenuItem>
-        <MenuItem>Certifications</MenuItem> */}
+        <MenuItem>
+          <Link to="/">Professional Timeline</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/browser-game">Browser Game</Link>
+        </MenuItem>
       </MenuItems>
     </TopBarContainer>
   );
