@@ -264,7 +264,6 @@ const TimelineItems = styled.div`
     position: relative;
   }
 `;
-console.log(TimelineItems);
 
 export function ProfessionalTimeline() {
   return (
