@@ -135,6 +135,9 @@ export function TopBar() {
         <MenuItem isMenuOpen={isMenuOpen}>
           <Link to="/certifications">Certifications</Link>
         </MenuItem>
+        <MenuItem isMenuOpen={isMenuOpen}>
+          <a href="https://skillscape.app">SkillScape</a>
+        </MenuItem>
       </MenuItems>
     </TopBarContainer>
   );
