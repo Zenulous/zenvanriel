@@ -33,7 +33,7 @@ const MenuItems = styled.ul<{ isMenuOpen: boolean }>`
   margin-right: 25px;
   padding: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     display: ${({ isMenuOpen }) => (isMenuOpen ? "flex" : "none")};
     flex-direction: column;
     align-items: flex-start;
@@ -85,7 +85,7 @@ const HamburgerMenu = styled.div<{ isMenuOpen: boolean }>`
   fill: #0056b3;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     align-self: flex-end;
     display: inline;
     animation: ${({ isMenuOpen }) => (isMenuOpen ? rotateAnimation : "none")}
@@ -137,9 +137,6 @@ export function TopBar() {
         </MenuItem>
         <MenuItem isMenuOpen={isMenuOpen}>
           <Link to="/browser-game">Browser Game</Link>
-        </MenuItem>
-        <MenuItem isMenuOpen={isMenuOpen}>
-          <a href="https://skillscape.app">SkillScape</a>
         </MenuItem>
       </MenuItems>
     </TopBarContainer>
