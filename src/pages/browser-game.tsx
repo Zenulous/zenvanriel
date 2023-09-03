@@ -3,6 +3,7 @@ import "../css/browser-game.css";
 import styled from "styled-components";
 import { Layout } from "../components/Layout";
 import ZenSays from "../components/ZenSays";
+import { SEOHead } from "../components/SEOHead";
 
 const GameContainer = styled.div`
   display: flex;
@@ -117,3 +118,5 @@ export default function BrowserGame() {
     </Layout>
   );
 }
+
+export const Head = () => <SEOHead />;

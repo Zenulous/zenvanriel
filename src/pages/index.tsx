@@ -1,9 +1,9 @@
 import React from "react";
-import { SEO } from "../components/seo";
 import { ProfessionalTimeline } from "../components/ProfessionalTimeline";
 import styled from "styled-components";
 import { Layout } from "../components/Layout";
 import ZenSays from "../components/ZenSays";
+import { SEOHead } from "../components/SEOHead";
 
 const PageContainer = styled.div`
   display: flex;
@@ -36,4 +36,4 @@ export default function IndexPage() {
   );
 }
 
-export const Head = () => <SEO />;
+export const Head = () => <SEOHead />;

@@ -8,7 +8,7 @@ interface SEOProps {
   children?: string;
 }
 
-export const SEO = ({ title, description, pathname, children }: SEOProps) => {
+export function SEOHead({ title, description, pathname, children }: SEOProps) {
   const {
     title: defaultTitle,
     description: defaultDescription,
@@ -28,6 +28,21 @@ export const SEO = ({ title, description, pathname, children }: SEOProps) => {
   return (
     <>
       <title>{seo.title}</title>
+      <meta
+        key="viewport"
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=zoom, orientation=portrait"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -40,4 +55,4 @@ export const SEO = ({ title, description, pathname, children }: SEOProps) => {
       {children}
     </>
   );
-};
+}

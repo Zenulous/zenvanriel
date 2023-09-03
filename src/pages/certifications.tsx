@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Layout } from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import ZenSays from "../components/ZenSays";
+import { SEOHead } from "../components/SEOHead";
 
 const CertficateContainer = styled.div`
   display: flex;
@@ -119,3 +120,5 @@ export default function Certifications() {
     </Layout>
   );
 }
+
+export const Head = () => <SEOHead />;

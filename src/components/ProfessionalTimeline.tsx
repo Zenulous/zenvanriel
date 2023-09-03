@@ -24,12 +24,24 @@ Software Engineer II`,
       type: "absolute",
       zIndex: 8,
     },
-    description: `• Developed Support Copilot: Increased self-help for users with any kind of problem on GitHub
-
-    • Automating Virtual Support with ML & AI
-
-    • Implementing Intelligent Search with Natural Language Processing
-    `,
+    description: (
+      <div>
+        • Developed{" "}
+        <a
+          href="https://github.blog/changelog/2023-08-04-copilot-in-github-support-alpha"
+          target="_blank"
+        >
+          Copilot in GitHub Support:
+        </a>
+        <br></br>
+        Increased self-help for users with any kind of problem on GitHub
+        <br></br>
+        <br></br>• Automating Virtual Support with ML & AI
+        <br></br>
+        <br></br>• Implementing Intelligent Search with Natural Language
+        Processing
+      </div>
+    ),
   },
   {
     title: `2022
