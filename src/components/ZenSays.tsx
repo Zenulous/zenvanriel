@@ -35,6 +35,7 @@ export default function ZenSays({ content }: { content: JSX.Element }) {
           src="../images/zen.jpeg"
           alt="Picture of Zen van Riel"
           placeholder="blurred"
+          quality={100}
           height={75}
           style={{ borderRadius: "25px" }}
         />

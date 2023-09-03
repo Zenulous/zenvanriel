@@ -8,7 +8,7 @@ const TopBarContainer = styled.div`
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   z-index: 100;
   align-items: center;
   justify-content: space-between;
@@ -130,10 +130,13 @@ export function TopBar() {
           <Link to="/">Professional Timeline</Link>
         </MenuItem>
         <MenuItem isMenuOpen={isMenuOpen}>
-          <Link to="/browser-game">Browser Game</Link>
+          <Link to="/testimonials">Testimonials</Link>
         </MenuItem>
         <MenuItem isMenuOpen={isMenuOpen}>
           <Link to="/certifications">Certifications</Link>
+        </MenuItem>
+        <MenuItem isMenuOpen={isMenuOpen}>
+          <Link to="/browser-game">Browser Game</Link>
         </MenuItem>
         <MenuItem isMenuOpen={isMenuOpen}>
           <a href="https://skillscape.app">SkillScape</a>

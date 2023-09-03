@@ -21,16 +21,34 @@ const CertificatesRow = styled.div`
   margin-bottom: 40px;
 `;
 
+const CertificateItemTitle = styled.h4`
+  width: 15%;
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
+`;
+
 const CertificateItem = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 25px;
+  width: 100%;
   margin: 0 20px;
   @media (max-width: 768px) {
     width: 100%;
     margin: 0;
+    align-items: center;
+    flex-direction: column;
   }
+`;
+
+const CertificateIconBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
 `;
 
 export default function Certifications() {
@@ -41,8 +59,8 @@ export default function Certifications() {
           <div>
             These are the certifications I've earned throughout my professional
             career. They've allowed me to gain expertise across the entire
-            software development stack, which means I can own an application's
-            development end-to-end.
+            software development stack, which means I can own an application
+            end-to-end.
           </div>
         }
       ></ZenSays>
@@ -50,70 +68,78 @@ export default function Certifications() {
         <h2>Current Certifications</h2>
         <CertificatesRow>
           <CertificateItem>
-            <h4>Software Development</h4>
-            <StaticImage
-              src="../images/certifications/certificationDeveloper.png"
-              alt="Certification Icon"
-              placeholder="blurred"
-              width={250}
-            />
-            <StaticImage
-              src="../images/certifications/certificationDevOps.png"
-              alt="Certification Icon"
-              placeholder="blurred"
-              width={250}
-            />
-            <StaticImage
-              src="../images/certifications/certificationDevOps.png"
-              alt="Certification Icon"
-              placeholder="blurred"
-              width={250}
-            />
+            <CertificateItemTitle>Software Development</CertificateItemTitle>
+            <CertificateIconBox>
+              <StaticImage
+                src="../images/certifications/certificationDeveloper.png"
+                alt="Certification Icon"
+                placeholder="blurred"
+                width={250}
+              />
+              <StaticImage
+                src="../images/certifications/certificationDevOps.png"
+                alt="Certification Icon"
+                placeholder="blurred"
+                width={250}
+              />
+              <StaticImage
+                src="../images/certifications/certificationDevOps.png"
+                alt="Certification Icon"
+                placeholder="blurred"
+                width={250}
+              />
+            </CertificateIconBox>
           </CertificateItem>
           <CertificateItem>
-            <h4>Data Science</h4>
-            <StaticImage
-              src="../images/certifications/certificationDataEngineer.png"
-              alt="Certification Icon"
-              placeholder="blurred"
-              width={250}
-            />
-            <StaticImage
-              src="../images/certifications/certificationDataScientist.png"
-              alt="Certification Icon"
-              placeholder="blurred"
-              width={250}
-            />
+            <CertificateItemTitle>Data Science</CertificateItemTitle>
+            <CertificateIconBox>
+              <StaticImage
+                src="../images/certifications/certificationDataEngineer.png"
+                alt="Certification Icon"
+                placeholder="blurred"
+                width={250}
+              />
+              <StaticImage
+                src="../images/certifications/certificationDataScientist.png"
+                alt="Certification Icon"
+                placeholder="blurred"
+                width={250}
+              />{" "}
+            </CertificateIconBox>
           </CertificateItem>
           <CertificateItem>
-            <h4>Software Architecture</h4>
-            <StaticImage
-              src="../images/certifications/certificationArchitect.png"
-              alt="Certification Icon"
-              placeholder="blurred"
-              width={250}
-            />{" "}
-            <StaticImage
-              src="../images/certifications/certificationCKAD.png"
-              alt="Certification Icon"
-              placeholder="blurred"
-              width={250}
-            />
+            <CertificateItemTitle>Software Architecture</CertificateItemTitle>
+            <CertificateIconBox>
+              <StaticImage
+                src="../images/certifications/certificationArchitect.png"
+                alt="Certification Icon"
+                placeholder="blurred"
+                width={250}
+              />{" "}
+              <StaticImage
+                src="../images/certifications/certificationCKAD.png"
+                alt="Certification Icon"
+                placeholder="blurred"
+                width={250}
+              />
+            </CertificateIconBox>
           </CertificateItem>
           <CertificateItem>
-            <h4>Miscellaneous</h4>
-            <StaticImage
-              src="../images/certifications/certificationAdministrator.png"
-              alt="Certification Icon"
-              placeholder="blurred"
-              width={250}
-            />{" "}
-            <StaticImage
-              src="../images/certifications/certificationTrainer.png"
-              alt="Certification Icon"
-              placeholder="blurred"
-              width={250}
-            />
+            <CertificateItemTitle>Miscellaneous</CertificateItemTitle>
+            <CertificateIconBox>
+              <StaticImage
+                src="../images/certifications/certificationAdministrator.png"
+                alt="Certification Icon"
+                placeholder="blurred"
+                width={250}
+              />
+              <StaticImage
+                src="../images/certifications/certificationTrainer.png"
+                alt="Certification Icon"
+                placeholder="blurred"
+                width={250}
+              />
+            </CertificateIconBox>
           </CertificateItem>
         </CertificatesRow>
       </CertficateContainer>
