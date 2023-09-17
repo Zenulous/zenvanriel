@@ -26,18 +26,17 @@ Software Engineer II`,
     },
     description: (
       <div>
-        • Developed{" "}
+        Increased self-help for users with any kind of problem on GitHub as part
+        of the Digital Customer Success team.
+        <br></br> <br></br>•{" "}
         <a
           href="https://github.blog/changelog/2023-08-04-copilot-in-github-support-alpha"
           target="_blank"
         >
-          Copilot in GitHub Support:
+          Developed Copilot in GitHub Support
         </a>
-        <br></br>
-        Increased self-help for users with any kind of problem on GitHub
-        <br></br>
+        , a GPT-4 based large language model assistant
         <br></br>• Automating Virtual Support with ML & AI
-        <br></br>
         <br></br>• Implementing Intelligent Search with Natural Language
         Processing
       </div>
