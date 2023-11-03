@@ -72,19 +72,19 @@ export default function Certifications() {
             <CertificateIconBox>
               <StaticImage
                 src="../images/certifications/certificationDeveloper.png"
-                alt="Certification Icon"
+                alt="Azure Developer Certification Icon"
                 placeholder="blurred"
                 width={250}
               />
               <StaticImage
                 src="../images/certifications/certificationDevOps.png"
-                alt="Certification Icon"
+                alt="Azure DevOps Engineer Certification Icon"
                 placeholder="blurred"
                 width={250}
               />
               <StaticImage
-                src="../images/certifications/certificationDevOps.png"
-                alt="Certification Icon"
+                src="../images/certifications/certificationAi.png"
+                alt="Azure AI Engineer Certification Icon"
                 placeholder="blurred"
                 width={250}
               />
@@ -95,13 +95,13 @@ export default function Certifications() {
             <CertificateIconBox>
               <StaticImage
                 src="../images/certifications/certificationDataEngineer.png"
-                alt="Certification Icon"
+                alt="Azure Data Engineer Certification Icon"
                 placeholder="blurred"
                 width={250}
               />
               <StaticImage
                 src="../images/certifications/certificationDataScientist.png"
-                alt="Certification Icon"
+                alt="Azure Data Scientist Certification Icon"
                 placeholder="blurred"
                 width={250}
               />{" "}
@@ -112,13 +112,13 @@ export default function Certifications() {
             <CertificateIconBox>
               <StaticImage
                 src="../images/certifications/certificationArchitect.png"
-                alt="Certification Icon"
+                alt="Azure Solutions Architectu Certification Icon"
                 placeholder="blurred"
                 width={250}
               />{" "}
               <StaticImage
                 src="../images/certifications/certificationCKAD.png"
-                alt="Certification Icon"
+                alt="Certified Kubernetes Application Developer Icon"
                 placeholder="blurred"
                 width={250}
               />
@@ -129,13 +129,13 @@ export default function Certifications() {
             <CertificateIconBox>
               <StaticImage
                 src="../images/certifications/certificationAdministrator.png"
-                alt="Certification Icon"
+                alt="Azure Administrator Certification Icon"
                 placeholder="blurred"
                 width={250}
               />
               <StaticImage
                 src="../images/certifications/certificationTrainer.png"
-                alt="Certification Icon"
+                alt="Microsoft Certified Trainer Certification Icon"
                 placeholder="blurred"
                 width={250}
               />
