@@ -138,6 +138,11 @@ export function TopBar() {
         <MenuItem isMenuOpen={isMenuOpen}>
           <Link to="/browser-game">Browser Game</Link>
         </MenuItem>
+        <MenuItem isMenuOpen={isMenuOpen}>
+          <Link to="https://www.youtube.com/watch?v=SZpCLaj_424">
+            Public Speaking
+          </Link>
+        </MenuItem>
       </MenuItems>
     </TopBarContainer>
   );
