@@ -3,7 +3,46 @@ import TimelineItem, { TimelineItemProps } from "../components/TimelineItem";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
+const githubDescription = (
+  <div>
+    Increased self-help for users with any kind of problem on GitHub as part of
+    the Digital Customer Success team.
+    <br></br> <br></br>•{" "}
+    <a
+      href="https://github.blog/changelog/2024-02-09-copilot-in-github-support-ga"
+      target="_blank"
+    >
+      Developed Copilot in GitHub Support
+    </a>
+    , a GPT-4 based large language model assistant automatically deflecting
+    hundreds of support tickets each week.
+    <br></br>• Automating Virtual Support with ML & AI
+    <br></br>• Implementing Intelligent Search with Natural Language Processing
+  </div>
+);
 const jobs: TimelineItemProps[] = [
+  {
+    title: `2024
+GitHub
+Software Engineer III`,
+    imageComponent: (
+      <StaticImage
+        src="../images/githubIcon.svg"
+        alt="GitHub Icon"
+        placeholder="blurred"
+        width={50}
+        height={50}
+      />
+    ),
+    width: 300,
+    position: {
+      top: 25,
+      left: 18,
+      type: "absolute",
+      zIndex: 9,
+    },
+    description: githubDescription,
+  },
   {
     title: `2023
 GitHub
@@ -24,23 +63,7 @@ Software Engineer II`,
       type: "absolute",
       zIndex: 8,
     },
-    description: (
-      <div>
-        Increased self-help for users with any kind of problem on GitHub as part
-        of the Digital Customer Success team.
-        <br></br> <br></br>•{" "}
-        <a
-          href="https://github.blog/changelog/2023-08-04-copilot-in-github-support-alpha"
-          target="_blank"
-        >
-          Developed Copilot in GitHub Support
-        </a>
-        , a GPT-4 based large language model assistant
-        <br></br>• Automating Virtual Support with ML & AI
-        <br></br>• Implementing Intelligent Search with Natural Language
-        Processing
-      </div>
-    ),
+    description: githubDescription,
   },
   {
     title: `2022
